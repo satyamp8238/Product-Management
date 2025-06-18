@@ -46,33 +46,33 @@ This enables:
 - Easier deployment  
 ---
 
-#🔌 Web API & UI Architecture Overview
+##🔌 Web API & UI Architecture Overview
 📦 Web API Layer (ProductCategory.API)
 🔹 ProductsController – CRUD Endpoints
-GET /api/products: Supports pagination; returns product list with total count & total pages.
-GET /api/products/{id}: Returns product by ID; responds with 404 if not found.
-POST /api/products: Adds a new product after validating the category and model state.
-PUT /api/products/{id}: Updates product; validates ID match and category existence.
-DELETE /api/products/{id}: Deletes product; responds with 404 if product not found.
+- GET /api/products: Supports pagination; returns product list with total count & total pages.
+- GET /api/products/{id}: Returns product by ID; responds with 404 if not found.
+- POST /api/products: Adds a new product after validating the category and model state.
+- PUT /api/products/{id}: Updates product; validates ID match and category existence.
+- DELETE /api/products/{id}: Deletes product; responds with 404 if product not found.
 
 ✅ Validation
-Uses ModelState.IsValid for DTO validation.
-Checks for valid CategoryId during add/update.
+- Uses ModelState.IsValid for DTO validation.
+- Checks for valid CategoryId during add/update.
 
 ⚠️ Error Handling
-Returns appropriate HTTP status codes (400, 404, etc.)
-Sends descriptive error messages in failure cases.
+- Returns appropriate HTTP status codes (400, 404, etc.)
+- Sends descriptive error messages in failure cases.
 
 🔹 CategoriesController – CRUD Endpoints
-GET /api/categories: Returns all categories.
-GET /api/categories/{id}: Returns category by ID; 404 if not found.
-POST /api/categories: Adds a new category with a new GUID.
-PUT /api/categories/{id}: Updates category; validates ID match.
-DELETE /api/categories/{id}: Deletes category if not in use.
+- GET /api/categories: Returns all categories.
+- GET /api/categories/{id}: Returns category by ID; 404 if not found.
+- POST /api/categories: Adds a new category with a new GUID.
+- PUT /api/categories/{id}: Updates category; validates ID match.
+- DELETE /api/categories/{id}: Deletes category if not in use.
 
 ✅ Validation & Error Handling
-Prevents deletion if category is used in products.
-Returns structured status & message on errors.
+- Prevents deletion if category is used in products.
+- Returns structured status & message on errors.
 
 ⚙️ API Project Setup
 🔧 Swagger: Enabled in development for testing and documentation.
@@ -82,23 +82,22 @@ Returns structured status & message on errors.
 
 🖥️ UI Layer (ProductCategory.UI)
 🔹 Services
-ProductService / CategoryService:
-Uses HttpClientFactory with named clients.
-Implements async CRUD API calls.
-Handles API error responses gracefully.
+- ProductService / CategoryService:
+- Uses HttpClientFactory with named clients.
+- Implements async CRUD API calls.
+- Handles API error responses gracefully.
 
 🔹 Controllers
-ProductController / CategoryController:
-Interacts with APIs via service layer.
-Uses model validation.
-Returns JSON for AJAX responses.
-Supports pagination using ViewModels.
+- ProductController / CategoryController:
+- Interacts with APIs via service layer.
+- Uses model validation.
+- Returns JSON for AJAX responses.
+- Supports pagination using ViewModels.
 
 🔧 Program.cs
-Registers HTTP client and services.
-Configures JSON serialization settings.
-
-Sets up default routing and MVC.
+- Registers HTTP client and services.
+- Configures JSON serialization settings.
+- Sets up default routing and MVC.
 
 🧱 Microservices-Friendly Architecture
 ✅ Separation of Concerns: API and UI are two different projects within the same solution.
