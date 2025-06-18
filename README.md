@@ -100,10 +100,10 @@ This enables:
 - Sets up default routing and MVC.
 
 ### 🧱 Microservices-Friendly Architecture
-✅ Separation of Concerns: API and UI are two different projects within the same solution.
-✅ HTTP Communication: UI talks to API via HttpClient, not direct DB access.
-✅ Scalability: Each layer can be deployed/scaled independently.
-✅ Extensibility: Easily extendable to add services like Auth, Reports, etc.
+- ✅ Separation of Concerns: API and UI are two different projects within the same solution.
+- ✅ HTTP Communication: UI talks to API via HttpClient, not direct DB access.
+- ✅ Scalability: Each layer can be deployed/scaled independently.
+- ✅ Extensibility: Easily extendable to add services like Auth, Reports, etc.
 
 ### 📈 Recommendations
 - DTO Validation: Use [Required], [StringLength], and other annotations.
