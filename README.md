@@ -47,30 +47,30 @@ This enables:
 ---
 
 ## 🔌 Web API & UI Architecture Overview
-📦 Web API Layer (ProductCategory.API)
-🔹 ProductsController – CRUD Endpoints
+### 📦 Web API Layer (ProductCategory.API)
+### 🔹 ProductsController – CRUD Endpoints
 - GET /api/products: Supports pagination; returns product list with total count & total pages.
 - GET /api/products/{id}: Returns product by ID; responds with 404 if not found.
 - POST /api/products: Adds a new product after validating the category and model state.
 - PUT /api/products/{id}: Updates product; validates ID match and category existence.
 - DELETE /api/products/{id}: Deletes product; responds with 404 if product not found.
 
-✅ Validation
+### ✅ Validation
 - Uses ModelState.IsValid for DTO validation.
 - Checks for valid CategoryId during add/update.
 
-⚠️ Error Handling
+### ⚠️ Error Handling
 - Returns appropriate HTTP status codes (400, 404, etc.)
 - Sends descriptive error messages in failure cases.
 
-🔹 CategoriesController – CRUD Endpoints
+### 🔹 CategoriesController – CRUD Endpoints
 - GET /api/categories: Returns all categories.
 - GET /api/categories/{id}: Returns category by ID; 404 if not found.
 - POST /api/categories: Adds a new category with a new GUID.
 - PUT /api/categories/{id}: Updates category; validates ID match.
 - DELETE /api/categories/{id}: Deletes category if not in use.
 
-✅ Validation & Error Handling
+### ✅ Validation & Error Handling
 - Prevents deletion if category is used in products.
 - Returns structured status & message on errors.
 
@@ -81,13 +81,13 @@ This enables:
 - Authorization: Middleware present (configurable).
 
 ## 🖥️ UI Layer (ProductCategory.UI)
-🔹 Services
+### 🔹 Services
 - ProductService / CategoryService:
 - Uses HttpClientFactory with named clients.
 - Implements async CRUD API calls.
 - Handles API error responses gracefully.
 
-🔹 Controllers
+### 🔹 Controllers
 - ProductController / CategoryController:
 - Interacts with APIs via service layer.
 - Uses model validation.
@@ -99,18 +99,18 @@ This enables:
 - Configures JSON serialization settings.
 - Sets up default routing and MVC.
 
-🧱 Microservices-Friendly Architecture
+### 🧱 Microservices-Friendly Architecture
 ✅ Separation of Concerns: API and UI are two different projects within the same solution.
 ✅ HTTP Communication: UI talks to API via HttpClient, not direct DB access.
 ✅ Scalability: Each layer can be deployed/scaled independently.
 ✅ Extensibility: Easily extendable to add services like Auth, Reports, etc.
 
-📈 Recommendations
-✔️ DTO Validation: Use [Required], [StringLength], and other annotations.
-🧾 Centralized Error Logging: Add structured logging with ILogger<T>.
-🔁 Standard API Responses: Use a consistent envelope { status, message, data }.
-🔐 Security Layer: Add authentication (JWT or Identity) if needed.
-🧪 Testing: Include unit & integration tests for API and service layers.
+### 📈 Recommendations
+- DTO Validation: Use [Required], [StringLength], and other annotations.
+- Centralized Error Logging: Add structured logging with ILogger<T>.
+- Standard API Responses: Use a consistent envelope { status, message, data }.
+- Security Layer: Add authentication (JWT or Identity) if needed.
+- Testing: Include unit & integration tests for API and service layers.
 
 ## 📸 Screenshots & Flow
 
