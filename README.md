@@ -1,4 +1,5 @@
-🛒 Product & Category Management Module
+### 🛒 Product & Category Management Module
+
 This module provides complete CRUD functionality for managing products and categories using ASP.NET Core Web API and Razor Pages in the same solution. It features a responsive UI built with Bootstrap and jQuery, and clean API integration using Entity Framework Core.
 
 💻 Features
