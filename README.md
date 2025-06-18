@@ -85,8 +85,8 @@ This module allows users to manage products with CRUD functionality (Create, Rea
 **Action:**
 
 - Click Edit button on product list
-- ![image](https://github.com/user-attachments/assets/37577bab-489f-4333-982d-94b05bca64ec)
 
+  ![image](https://github.com/user-attachments/assets/1ca6e14f-4367-4d9d-a39d-1140208c1949)
 
 **Result:**
 
@@ -94,8 +94,7 @@ This module allows users to manage products with CRUD functionality (Create, Rea
 - Fields pre-filled
 - Title is "Edit Product"
 
-![image](https://github.com/user-attachments/assets/835effec-a772-49c2-982a-e3f0c6bfdcfe)
-
+![image](https://github.com/user-attachments/assets/48828db4-2e6e-4c1f-ba09-f3f4e1dd33e1)
 
 ---
 
@@ -109,9 +108,7 @@ This module allows users to manage products with CRUD functionality (Create, Rea
 - Product gets deleted
 - Page reloads
 
-1. ![image](https://github.com/user-attachments/assets/b70b9819-b1c3-417f-bcbe-3346aca89af4)
-2. ![image](https://github.com/user-attachments/assets/d14bcc2c-cd87-4f90-9536-cca1d50ca822)
-
+![image](https://github.com/user-attachments/assets/82361d09-499e-4934-977f-abee1a3cf237)
 
 ---
 
