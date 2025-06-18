@@ -1,0 +1,14 @@
+D:\Practical\Amsby\Amsby\ProductCategory.Domain\bin\Debug\net7.0\ProductCategory.Domain.deps.json
+D:\Practical\Amsby\Amsby\ProductCategory.Domain\bin\Debug\net7.0\ProductCategory.Domain.runtimeconfig.json
+D:\Practical\Amsby\Amsby\ProductCategory.Domain\bin\Debug\net7.0\ProductCategory.Domain.dll
+D:\Practical\Amsby\Amsby\ProductCategory.Domain\bin\Debug\net7.0\ProductCategory.Domain.pdb
+D:\Practical\Amsby\Amsby\ProductCategory.Domain\obj\Debug\net7.0\ProductCategory.Domain.csproj.AssemblyReference.cache
+D:\Practical\Amsby\Amsby\ProductCategory.Domain\obj\Debug\net7.0\ProductCategory.Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\Practical\Amsby\Amsby\ProductCategory.Domain\obj\Debug\net7.0\ProductCategory.Domain.AssemblyInfoInputs.cache
+D:\Practical\Amsby\Amsby\ProductCategory.Domain\obj\Debug\net7.0\ProductCategory.Domain.AssemblyInfo.cs
+D:\Practical\Amsby\Amsby\ProductCategory.Domain\obj\Debug\net7.0\ProductCategory.Domain.csproj.CoreCompileInputs.cache
+D:\Practical\Amsby\Amsby\ProductCategory.Domain\obj\Debug\net7.0\ProductCategory.Domain.dll
+D:\Practical\Amsby\Amsby\ProductCategory.Domain\obj\Debug\net7.0\refint\ProductCategory.Domain.dll
+D:\Practical\Amsby\Amsby\ProductCategory.Domain\obj\Debug\net7.0\ProductCategory.Domain.pdb
+D:\Practical\Amsby\Amsby\ProductCategory.Domain\obj\Debug\net7.0\ProductCategory.Domain.genruntimeconfig.cache
+D:\Practical\Amsby\Amsby\ProductCategory.Domain\obj\Debug\net7.0\ref\ProductCategory.Domain.dll
