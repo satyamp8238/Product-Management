@@ -1,28 +1,36 @@
-# 🛒 Product Management Module
+🛒 Product & Category Management Module
+This module provides complete CRUD functionality for managing products and categories using ASP.NET Core Web API and Razor Pages in the same solution. It features a responsive UI built with Bootstrap and jQuery, and clean API integration using Entity Framework Core.
 
-This module allows users to manage products with CRUD functionality (Create, Read, Update, Delete) using Razor Pages, jQuery, and Bootstrap modals.
+💻 Features
+🔹 Product Management
+Add new products
+Edit existing products
+Delete products
+Form validation
+Modal UI using Bootstrap
+jQuery AJAX-based interactions
+Product list with category name display
+Category dropdown integrated in product form
 
----
-
-## 💻 Features
-
-- Add new products
-- Edit existing products
-- Delete products
-- Form validation
-- Modal UI with Bootstrap
-- jQuery AJAX requests
-- Category dropdown integration
-
----
+🔹 Category Management
+Add new categories
+Edit existing categories
+Delete categories
+Form validation
+If a category is in use by any product, it cannot be deleted (validated in backend)
 
 ## 🚀 Technologies Used
+ASP.NET Core Web API (for backend)
+Razor Pages (for frontend UI)
+Entity Framework Core (for database operations)
+SQL Server (as the database)
+Bootstrap 5 (for responsive UI)
+jQuery (for dynamic UI actions)
+Swagger (for API testing/documentation)
 
-- ASP.NET Core Razor Pages
-- Entity Framework Core
-- Bootstrap 5
-- jQuery
-- SQL Server
+🔄 Backend & Frontend in One Solution
+✅ Both API and UI are developed inside the same ASP.NET Core solution.
+This allows tight integration, better maintainability, and easier deployment.
 
 ---
 
@@ -102,6 +110,8 @@ This module allows users to manage products with CRUD functionality (Create, Rea
 
 **Action:** Click Delete button
 
+
+
 **Result:**
 
 - Confirmation dialog
@@ -111,17 +121,64 @@ This module allows users to manage products with CRUD functionality (Create, Rea
 ![image](https://github.com/user-attachments/assets/82361d09-499e-4934-977f-abee1a3cf237)
 
 ---
+### 6️⃣ Add Category 
+
+**Action:** Click the Add Category button.
+
+**Result:**
+- Modal opens with title "Add New Category"
+- All fields are empty
+- Category form is ready for input
+
+![image](https://github.com/user-attachments/assets/50497acb-3095-4834-8c16-be3ce3fa552b)
+
+---
+### 7️⃣ Edit Category
+
+**Action:** Click the Edit Category button.
+
+**Result:**
+- Modal opens with title "Edit Category"
+- Fields are pre-filled with selected category data
+- User can update name/description and submit
+
+![image](https://github.com/user-attachments/assets/182a84ea-ed64-40d7-a7d1-32ecdf0b70f0)
+
+---
+### 8️⃣ Delete Category
+
+**Action:** Click the Delete Category button.
+
+**Result:**
+- A confirmation dialog appears
+- If the category is not in use, it gets deleted successfully and page reloads
+- If the category is in use, show error: "Category is in use and cannot be deleted."
+  "Successful category delete confirmation"
+  ![image](https://github.com/user-attachments/assets/8d0cb5b8-2ec6-4549-a13f-dde920959ff2)
+
+  "Error alert for category in use"
+  ![image](https://github.com/user-attachments/assets/bb50bca0-0f9a-41e0-a81b-caf3fee6ff29)
+
 
 ## 🧪 Test Cases
+🔸 Product Module
+Test Case No.	Description	Expected Result
+TC01	Open Add Product Modal	Modal opens with empty fields & title set
+TC02	Add Product with valid input	Product created, modal closes, page reloads
+TC03	Add Product with missing fields	Validation error shown, modal stays open
+TC04	Open Edit Product Modal	Modal pre-fills data and shows correct title
+TC05	Edit Product	Product updates, success alert, reload page
+TC06	Delete Product	Product deletes after confirmation
 
-| Test Case No. | Description                          | Expected Result                                |
-|---------------|--------------------------------------|-------------------------------------------------|
-| TC01          | Open Add Product Modal               | Modal opens with empty fields & title set      |
-| TC02          | Add Product with valid input         | Product created, modal closes, page reloads    |
-| TC03          | Add Product with missing fields      | Validation error shown, modal stays open       |
-| TC04          | Open Edit Product Modal              | Modal pre-fills data and shows correct title   |
-| TC05          | Edit Product                         | Product updates, success alert, reload page    |
-| TC06          | Delete Product                       | Product deletes after confirmation             |
+🔹 Category Module
+Test Case No.	Description	Expected Result
+TC07	Open Add Category Modal	Modal opens with empty fields & title set
+TC08	Add Category with valid input	Category created, modal closes, page reloads
+TC09	Add Category with missing fields	Validation error shown, modal stays open
+TC10	Open Edit Category Modal	Modal pre-fills category data and shows title
+TC11	Edit Category	Category updates, success alert, reload page
+TC12	Delete Category	Category deletes after confirmation
+TC13	Delete In-Use Category	API returns error message: "Category is in use and cannot be deleted."
 
 ---
 
