@@ -74,13 +74,13 @@ This enables:
 - Prevents deletion if category is used in products.
 - Returns structured status & message on errors.
 
-⚙️ API Project Setup
-🔧 Swagger: Enabled in development for testing and documentation.
-🧩 Dependency Injection: Services, Repositories, and DbContext are DI-registered.
-🔒 HTTPS: Enforced in API project.
-🛡️ Authorization: Middleware present (configurable).
+## ⚙️ API Project Setup
+- Swagger: Enabled in development for testing and documentation.
+- Dependency Injection: Services, Repositories, and DbContext are DI-registered.
+- HTTPS: Enforced in API project.
+- Authorization: Middleware present (configurable).
 
-🖥️ UI Layer (ProductCategory.UI)
+##🖥️ UI Layer (ProductCategory.UI)
 🔹 Services
 - ProductService / CategoryService:
 - Uses HttpClientFactory with named clients.
