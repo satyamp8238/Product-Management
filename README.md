@@ -46,6 +46,76 @@ This enables:
 - Easier deployment  
 ---
 
+ Web API Layer (ProductCategory.API)
+ProductsController
+•	CRUD Endpoints:
+•	GET /api/products: Supports pagination, returns total count and total pages.
+•	GET /api/products/{id}: Returns product by ID, 404 if not found.
+•	POST /api/products: Adds a product, validates category existence and model state.
+•	PUT /api/products/{id}: Updates a product, checks for ID match, existence, and category validity.
+•	DELETE /api/products/{id}: Deletes a product, 404 if not found.
+•	Validation:
+•	Uses ModelState.IsValid for DTOs.
+•	Checks for valid category before add/update.
+•	Error Handling:
+•	Returns appropriate HTTP status codes and error messages.
+CategoriesController
+•	CRUD Endpoints:
+•	GET /api/categories: Returns all categories.
+•	GET /api/categories/{id}: Returns category by ID, 404 if not found.
+•	POST /api/categories: Adds a category, generates new GUID.
+•	PUT /api/categories/{id}: Updates a category, checks for ID match.
+•	DELETE /api/categories/{id}: Deletes a category if not in use.
+•	Validation & Error Handling:
+•	Checks for category-in-use before delete.
+•	Returns clear status and messages.
+API Project Setup
+•	Swagger: Enabled in development for API testing.
+•	Dependency Injection: Repositories and DbContext are registered.
+•	HTTPS: Enforced.
+•	Authorization: Middleware is present (though no policies are shown).
+---
+2. UI Layer (ProductCategory.UI)
+Services
+•	ProductService & CategoryService:
+•	Use HttpClientFactory with a named client for API calls.
+•	Implement async CRUD methods.
+•	Handle API responses and errors robustly.
+Controllers
+•	ProductController & CategoryController:
+•	Use services to interact with the API.
+•	Validate model state before processing.
+•	Return JSON responses for AJAX calls.
+•	Support pagination and view models for listing.
+Program.cs
+•	Service Registration:
+•	Registers services and HTTP client.
+•	Configures JSON options for property naming.
+•	Routing:
+•	Sets up default controller route.
+---
+3. Microservices Considerations
+•	Separation:
+•	API and UI are in separate projects, a good step toward microservices.
+•	Communication:
+•	UI communicates with API via HTTP, not direct DB access.
+•	Scalability:
+•	Each service can be deployed/scaled independently.
+•	Extensibility:
+•	Easy to add more services (e.g., authentication, reporting) as separate APIs.
+---
+4. Recommendations
+•	DTO Consistency:
+•	Ensure all DTOs have validation attributes.
+•	Error Logging:
+•	Add logging for exceptions in API controllers.
+•	Response Consistency:
+•	Standardize API responses (e.g., always return a consistent envelope).
+•	Security:
+•	Implement authentication/authorization as needed.
+•	Testing:
+•	Add unit and integration tests for controllers and services.
+
 ## 📸 Screenshots & Flow
 
 ### 1️⃣ Open Add Product Modal
