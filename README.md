@@ -1,38 +1,49 @@
-### 🛒 Product & Category Management Module
+# 🛒 Product & Category Management Module
 
-This module provides complete CRUD functionality for managing products and categories using ASP.NET Core Web API and Razor Pages in the same solution. It features a responsive UI built with Bootstrap and jQuery, and clean API integration using Entity Framework Core.
+This module provides complete **CRUD functionality** for managing **products and categories** using **ASP.NET Core Web API** and **Razor Pages** in the same solution. It features a **responsive UI** built with **Bootstrap** and **jQuery**, and clean API integration using **Entity Framework Core**.
 
-💻 Features
-🔹 Product Management
-Add new products
-Edit existing products
-Delete products
-Form validation
-Modal UI using Bootstrap
-jQuery AJAX-based interactions
-Product list with category name display
-Category dropdown integrated in product form
+---
 
-🔹 Category Management
-Add new categories
-Edit existing categories
-Delete categories
-Form validation
-If a category is in use by any product, it cannot be deleted (validated in backend)
+## 💻 Features
 
-## 🚀 Technologies Used
-ASP.NET Core Web API (for backend)
-Razor Pages (for frontend UI)
-Entity Framework Core (for database operations)
-SQL Server (as the database)
-Bootstrap 5 (for responsive UI)
-jQuery (for dynamic UI actions)
-Swagger (for API testing/documentation)
+### 🔹 Product Management
+- ✅ Add new products  
+- ✅ Edit existing products  
+- ✅ Delete products  
+- ✅ Form validation  
+- ✅ Modal UI using Bootstrap  
+- ✅ jQuery AJAX-based interactions  
+- ✅ Product list with category name display  
+- ✅ Category dropdown integrated in product form  
 
-🔄 Backend & Frontend in One Solution
-✅ Both API and UI are developed inside the same ASP.NET Core solution.
-This allows tight integration, better maintainability, and easier deployment.
+### 🔹 Category Management
+- ✅ Add new categories  
+- ✅ Edit existing categories  
+- ✅ Delete categories  
+- ✅ Form validation  
+- ✅ If a category is in use by any product, it **cannot be deleted** (validated in backend)  
 
+---
+
+## 🔧 Technologies Used
+
+- 🧩 **ASP.NET Core Web API** (Backend)
+- 🎨 **Razor Pages** (Frontend UI)
+- 🗄️ **Entity Framework Core** (Database operations)
+- 🛢️ **SQL Server** (Database)
+- 💠 **Bootstrap 5** (Responsive UI)
+- 💻 **jQuery** (Dynamic UI actions)
+- 🧪 **Swagger** (API testing & documentation)
+
+---
+
+## 🔄 Backend & Frontend in One Solution
+
+✅ Both **API** and **UI** are developed inside the same ASP.NET Core solution.  
+This enables:
+- Tight integration  
+- Better maintainability  
+- Easier deployment  
 ---
 
 ## 📸 Screenshots & Flow
