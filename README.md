@@ -46,7 +46,7 @@ This enables:
 - Easier deployment  
 ---
 
-##🔌 Web API & UI Architecture Overview
+## 🔌 Web API & UI Architecture Overview
 📦 Web API Layer (ProductCategory.API)
 🔹 ProductsController – CRUD Endpoints
 - GET /api/products: Supports pagination; returns product list with total count & total pages.
@@ -80,7 +80,7 @@ This enables:
 - HTTPS: Enforced in API project.
 - Authorization: Middleware present (configurable).
 
-##🖥️ UI Layer (ProductCategory.UI)
+## 🖥️ UI Layer (ProductCategory.UI)
 🔹 Services
 - ProductService / CategoryService:
 - Uses HttpClientFactory with named clients.
